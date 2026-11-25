@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A.F.A. Md. Bashiruddin - Senior IT Infrastructure & Azure Cloud Engineer | 25+ Years Enterprise IT | Microsoft Certified Azure Administrator (AZ-104) | 19+ Years at Chevron (Fortune 100)">
+    <meta name="keywords" content="Azure, Cloud Infrastructure, IT Infrastructure, DevOps, Systems Administration, Chevron, SD-WAN, Disaster Recovery, SOX Compliance">
+    <meta name="author" content="A.F.A. Md. Bashiruddin">
+    <meta property="og:title" content="A.F.A. Md. Bashiruddin - Senior IT Infrastructure & Azure Cloud Engineer">
+    <meta property="og:description" content="25+ years enterprise IT experience. Led 60+ server migration to Azure with zero data loss. Microsoft Certified Azure Administrator.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://bashiruddin.github.io/">
+    <title>A.F.A. Md. Bashiruddin | Senior IT Infrastructure & Azure Cloud Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1B3A5C;
+            --navy-light: #2C4A6E;
+            --teal: #2E7D32;
+            --teal-light: #3BA342;
+            --gray-900: #1A1A2E;
+            --gray-700: #333333;
+            --gray-500: #546E7A;
+            --gray-300: #B0BEC5;
+            --gray-100: #ECEFF1;
+            --gray-50: #F5F7FA;
+            --white: #FFFFFF;
+            --accent-gold: #D4A843;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--white);
+            color: var(--gray-700);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--teal);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--navy);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(46, 125, 50, 0.2);
+            border: 1px solid var(--teal-light);
+            color: var(--teal-light);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero .title {
+            font-size: clamp(18px, 2.5vw, 22px);
+            font-weight: 400;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 8px;
+        }
+
+        .hero .subtitle {
+            font-size: 15px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-metrics {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 0 16px;
+        }
+
+        .metric-value {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .hero-cta {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--teal);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--teal-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        /* Sections */
+        section {
+            padding: 72px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--teal);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 3.5vw, 36px);
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--teal), var(--teal-light));
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--gray-300);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--gray-500);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--teal), var(--teal-light));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 72px;
+            padding-bottom: 40px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 12px;
+            top: 4px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 3px solid var(--teal);
+            z-index: 1;
+        }
+
+        .timeline-marker.current {
+            background: var(--teal);
+        }
+
+        .timeline-date {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--teal);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-role {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .timeline-company {
+            font-size: 15px;
+            color: var(--gray-500);
+            margin-bottom: 16px;
+        }
+
+        .timeline-highlights {
+            list-style: none;
+        }
+
+        .timeline-highlights li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--gray-700);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .timeline-highlights li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--teal);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .cert-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 24px;
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            border-color: var(--teal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cert-year {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--teal);
+            background: rgba(46, 125, 50, 0.1);
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .cert-name {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        /* Skills */
+        .skills-category {
+            margin-bottom: 32px;
+        }
+
+        .skills-category-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skills-category-title::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background: var(--teal);
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: var(--gray-50);
+            color: var(--gray-700);
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid var(--gray-100);
+            transition: var(--transition);
+        }
+
+        .skill-tag:hover {
+            background: var(--teal);
+            color: var(--white);
+            border-color: var(--teal);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .contact .section-title {
+            color: var(--white);
+        }
+
+        .contact .section-divider {
+            margin-left: 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 24px;
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            background: rgba(46, 125, 50, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: var(--teal-light);
+        }
+
+        .contact-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--white);
+        }
+
+        .contact-value a {
+            color: var(--white);
+        }
+
+        .contact-value a:hover {
+            color: var(--teal-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: rgba(255,255,255,0.6);
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--teal-light);
+        }
+
+        footer a:hover {
+            color: var(--white);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 40px;
+            }
+
+            .hero-metrics {
+                gap: 16px;
+            }
+
+            .metric {
+                padding: 0 12px;
+            }
+
+            section {
+                padding: 56px 0;
+            }
+
+            .timeline::before {
+                left: 16px;
+            }
+
+            .timeline-item {
+                padding-left: 56px;
+            }
+
+            .timeline-marker {
+                left: 6px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .hero-cta, .btn { display: none; }
+            .hero { background: var(--navy) !important; -webkit-print-color-adjust: exact; }
+            section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Available for Opportunities &bull; Open to Relocation &bull; Remote-Ready</span>
+                <h1>A.F.A. Md. Bashiruddin</h1>
+                <p class="title">Senior IT Infrastructure & Azure Cloud Engineer</p>
+                <p class="subtitle">Microsoft Certified Azure Administrator (AZ-104) | 25+ Years Enterprise IT | 19+ Years at Chevron (Fortune 100)</p>
+
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <div class="metric-value">800+</div>
+                        <div class="metric-label">Users Supported</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">60+</div>
+                        <div class="metric-label">Servers Migrated to Azure</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">8+</div>
+                        <div class="metric-label">Sites on SD-WAN</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">95%+</div>
+                        <div class="metric-label">Infrastructure Uptime</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">25+</div>
+                        <div class="metric-label">Years Enterprise IT</div>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Get In Touch
+                    </a>
+                    <a href="Bashiruddin_Modern_CV.pdf" class="btn btn-secondary" download>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section id="summary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Professional Summary</span>
+                <h2 class="section-title">25+ Years Delivering Mission-Critical Infrastructure</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Cloud Migration Leadership</h3>
+                    <p>Spearheaded the zero-data-loss migration of 60+ physical servers to Microsoft Azure—one of the largest cloud migrations in Chevron Asia-Pacific—maintaining 95%+ uptime throughout.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="2"></rect>
+                            <path d="M16 2v20"></path>
+                            <path d="M8 2v20"></path>
+                            <path d="M2 8h20"></path>
+                            <path d="M2 16h20"></path>
+                        </svg>
+                    </div>
+                    <h3>Enterprise SD-WAN Architecture</h3>
+                    <p>Designed and deployed enterprise SD-WAN (Cisco Meraki) connecting 8+ geographically dispersed sites, replacing legacy MPLS WAN—reducing costs by ~30% while improving reliability.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>SOX Audit & Compliance</h3>
+                    <p>Drove control improvements across access management, change control, and audit logging for Chevron's triennial SOX IT audit—delivering measurably better audit outcomes and findings accepted.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Team Leadership & Strategy</h3>
+                    <p>Technical team lead managing multi-million dollar infrastructure budgets, vendor relationships, and cross-functional projects. Mentored junior engineers and coordinated with global IT leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Professional Experience</span>
+                <h2 class="section-title">Progressive Leadership at a Fortune 100 Energy Company</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline">
+                <!-- Senior Role -->
+                <div class="timeline-item">
+                    <div class="timeline-marker current"></div>
+                    <div class="timeline-date">March 2012 – April 2026</div>
+                    <div class="timeline-role">IT Systems Administrator (Senior) — PCN & OT Cloud Engineer</div>
+                    <div class="timeline-company">Chevron Corporation | Dhaka, Bangladesh</div>
+                    <ul class="timeline-highlights">
+                        <li>Led migration of 60+ physical servers to Microsoft Azure with zero data loss, maintaining 95%+ uptime</li>
+                        <li>Architected multi-tier disaster recovery on Azure for mission-critical petroleum operations</li>
+                        <li>Implemented enterprise SD-WAN (Cisco Meraki) across 8+ sites, replacing legacy MPLS WAN</li>
+                        <li>Managed PCN/OT platform integrating industrial control systems with enterprise IT and Azure</li>
+                        <li>Administered 60+ Windows Servers (2008–2025), Active Directory, DNS/DHCP, Exchange, VMware/Hyper-V</li>
+                        <li>Operated EMC storage (VNX/Unity) and Networker backup with zero data-loss incidents over a decade</li>
+                        <li>Supported triennial SOX IT audits; drove control improvements yielding better audit outcomes</li>
+                        <li>Deployed monthly patches across 800+ endpoints and 60+ servers with 99%+ compliance</li>
+                        <li>Implemented GLAM for automated AD security group compliance and lifecycle management</li>
+                        <li>Technical Coordinator for BMC Remedy ITSM rollout (Change/Release/Incident Management)</li>
+                        <li>Prepared annual IT infrastructure budgets and multi-year hardware lifecycle forecasts</li>
+                    </ul>
+                </div>
+
+                <!-- Earlier Role -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">July 2006 – February 2012</div>
+                    <div class="timeline-role">Technical Assistant — IC&T Support</div>
+                    <div class="timeline-company">Chevron Corporation | Dhaka, Bangladesh</div>
+                    <ul class="timeline-highlights">
+                        <li>Technical Coordinator for GIL3 deployment (2008–2009): upgraded 800+ workstations; awarded Chevron Corporate Gold Star Quality Award</li>
+                        <li>Led SmartBadge deployment (2006): smart card + PIN authentication for network and physical access</li>
+                        <li>IT Coordinator for Office 57 relocation (2005): moved all IT equipment and data center with zero downtime</li>
+                        <li>Provided Tier 1/2 support for HQ and field sites including JDE ERP and SAP Ariba integration</li>
+                    </ul>
+                </div>
+
+                <!-- Foundation -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2000 – 2006</div>
+                    <div class="timeline-role">Earlier Career Foundation</div>
+                    <div class="timeline-company">Ericsson Radio Systems | Information Solution Ltd (Dell) | Information Systems Group (NEC)</div>
+                    <ul class="timeline-highlights">
+                        <li>Senior Executive, Technical Support at Dell Distributor: PowerEdge server/storage support for World Bank, HSBC, US Embassy, Grameenphone</li>
+                        <li>Hardware Engineer at NEC Distributor: Designed/deployed LAN infrastructure for BRTA across 5 divisional HQs (~150 users)</li>
+                        <li>System Administrator at Ericsson: Workstation, server, and storage support with global escalation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Certifications & Credentials</span>
+                <h2 class="section-title">Validated Expertise Across Cloud, Networking & ITSM</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <span class="cert-year">2025</span>
+                    <span class="cert-name">Microsoft Certified: Azure Fundamentals (AZ-900)</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-year">2023</span>
+                    <span class="cert-name">Microsoft Certified: Azure Administrator Associate (AZ-104)</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-year">2010</span>
+                    <span class="cert-name">ITIL v3 Foundation Certificate in IT Service Management (AXELOS)</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-year">2005</span>
+                    <span class="cert-name">Cisco Certified Network Associate (CCNA)</span>
+                </div>
+                <div class="cert-card">
+                    <span class="cert-year">2000–2003</span>
+                    <span class="cert-name">Microsoft MCSE (Win 2000/2003), MCSA, MCP, MCTS (Windows Vista)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Technical Competencies</span>
+                <h2 class="section-title">Breadth Across Cloud, Infrastructure, Security & Operations</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">Cloud & Hybrid Infrastructure</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">Microsoft Azure Administration</span>
+                    <span class="skill-tag">Cloud Migration Strategy</span>
+                    <span class="skill-tag">Hybrid Cloud Architecture</span>
+                    <span class="skill-tag">Azure Disaster Recovery</span>
+                    <span class="skill-tag">Microsoft 365 & Exchange Online</span>
+                    <span class="skill-tag">Entra ID (Azure AD)</span>
+                    <span class="skill-tag">ExpressRoute / VPN</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">Systems & Server Engineering</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">Windows Server 2008–2025</span>
+                    <span class="skill-tag">Active Directory (Design, GPO, Trusts)</span>
+                    <span class="skill-tag">DNS/DHCP</span>
+                    <span class="skill-tag">VMware vSphere / Hyper-V</span>
+                    <span class="skill-tag">Dell & HPE Server Hardware</span>
+                    <span class="skill-tag">Linux (RHEL/Ubuntu) Administration</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">Networking & Connectivity</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">SD-WAN (Cisco Meraki, Fortinet)</span>
+                    <span class="skill-tag">LAN/WAN Design</span>
+                    <span class="skill-tag">Site-to-Site VPN</span>
+                    <span class="skill-tag">Multi-Site Connectivity</span>
+                    <span class="skill-tag">Network Security (CCNA-level)</span>
+                    <span class="skill-tag">Load Balancing</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">Storage, Backup & DR</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">EMC Storage (VNX/Unity)</span>
+                    <span class="skill-tag">NAS/SAN Architecture</span>
+                    <span class="skill-tag">Dell EMC Networker</span>
+                    <span class="skill-tag">Veritas Backup Exec</span>
+                    <span class="skill-tag">RPO/RTO Design & Compliance</span>
+                    <span class="skill-tag">Zero-Data-Loss Migration</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">Security, Compliance & Governance</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">SOX IT Audit Readiness</span>
+                    <span class="skill-tag">Access Management & GLAM</span>
+                    <span class="skill-tag">Patch Management (800+ endpoints)</span>
+                    <span class="skill-tag">Cyber Security Monitoring</span>
+                    <span class="skill-tag">Smart Badge/Physical Access Integration</span>
+                    <span class="skill-tag">ITGC/ITAC Controls</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">ITSM, Operations & Leadership</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">BMC Remedy (Change/Release/Incident)</span>
+                    <span class="skill-tag">ITIL v3 Foundation</span>
+                    <span class="skill-tag">Data Center Operations</span>
+                    <span class="skill-tag">Capacity Planning</span>
+                    <span class="skill-tag">Vendor Management</span>
+                    <span class="skill-tag">IT Budgeting & Lifecycle Forecasting</span>
+                    <span class="skill-tag">Technical Team Leadership</span>
+                    <span class="skill-tag">Executive Communication</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">OT / Industrial IT Integration</h3>
+                <div class="skills-tags">
+                    <span class="skill-tag">PCN/OT Platform Integration</span>
+                    <span class="skill-tag">Petroleum Production Systems</span>
+                    <span class="skill-tag">Field Site Connectivity</span>
+                    <span class="skill-tag">Industrial Cybersecurity</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & AWARDS -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Education & Recognition</span>
+                <h2 class="section-title">Academic Foundation & Professional Honors</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Education</h3>
+                    <p><strong>Master of Commerce (Accounting)</strong><br>Dhaka University College, National University — 2000</p>
+                    <p style="margin-top: 12px;"><strong>Bachelor of Commerce</strong><br>Siddeshwari University College, National University — 1996</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Awards & Recognition</h3>
+                    <p><strong>Chevron Corporate Gold Star Quality Award</strong> — GIL3 Deployment (2009)<br>Support Readiness Excellence</p>
+                    <p style="margin-top: 12px;"><strong>Certificate of Appreciation</strong> — Exceptional performance and leadership covering for a supervisor</p>
+                    <p style="margin-top: 12px;"><strong>Certificate of Appreciation</strong> — Implementing Energy Components for Chevron Bangladesh Profit Center</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" style="text-align: left; margin-bottom: 40px;">
+                <span class="section-label">Let's Connect</span>
+                <h2 class="section-title">Ready for Your Next Challenge</h2>
+                <div class="section-divider" style="margin-left: 0;"></div>
+            </div>
+            <p style="max-width: 600px; color: rgba(255,255,255,0.7); margin-bottom: 40px; font-size: 16px;">
+                I'm actively seeking Senior Azure/Cloud Infrastructure Engineer, IT Infrastructure Lead, or IT Operations Manager roles.
+                Open to full-time, contract, and consulting engagements. Available immediately for remote, relocation, or international assignments.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="mailto:BashiruddinBappy@gmail.com">BashiruddinBappy@gmail.com</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value"><a href="tel:+8801715177303">+880 1715 177 303</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </div>
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value"><a href="https://www.linkedin.com/in/bashiruddin-infrastructure-engineer/" target="_blank" rel="noopener">linkedin.com/in/bashiruddin-infrastructure-engineer</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-label">Location</div>
+                    <div class="contact-value">Dhaka, Bangladesh<br><span style="font-size: 13px; color: rgba(255,255,255,0.6);">Open to Relocation</span></div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="Bashiruddin_Modern_CV.pdf" class="btn btn-primary" download style="background: var(--white); color: var(--navy);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Full CV (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 A.F.A. Md. Bashiruddin. Built with care and hosted on GitHub Pages.</p>
+            <p style="margin-top: 8px;">
+                <a href="https://www.linkedin.com/in/bashiruddin-infrastructure-engineer/" target="_blank" rel="noopener">LinkedIn</a>
+                &nbsp;|&nbsp;
+                <a href="mailto:BashiruddinBappy@gmail.com">Email</a>
+                &nbsp;|&nbsp;
+                <a href="Bashiruddin_Modern_CV.pdf" download>Download CV</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0ms';
+                    entry.target.classList.add('animate-on-scroll');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards and sections
+        document.querySelectorAll('.card, .timeline-item, .cert-card, .skills-category').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add current year to footer copyright
+        document.querySelector('footer p').innerHTML = document.querySelector('footer p').innerHTML.replace('2025', new Date().getFullYear());
+    </script>
+</body>
+</html>
